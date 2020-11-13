@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>testbench生成</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+	<script src="js/converter.js"></script>
+</head>
+<body>
+	<nav class="navbar navbar-default navbar-fixed-top container-fluid">
+	  <div class="container">
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	        <a class="navbar-brand" href="#">EDA智能实验室</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	     	<ul class="nav navbar-nav">
+	       		<li class="active"><a href="#">Test Bench转换<span class="sr-only">(current)</span></a></li>
+	       		<li><a href="#">Other</a></li>
+	        </ul>
+	        <ul class="nav navbar-nav navbar-right login_btn">
+		        <li><a href="#" class="login">登录</a></li>
+		      	<li><a href="#" class="register">注册</a></li>
+	        </ul>
+	        <div class="login_info fr">
+		      		欢迎您：<em>老 师</em>
+		    </div>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+	<!-- 登录弹窗 -->
+	<div class="logoin_pop">
+		<div class="pop">
+			<div class="close"><a href="javascript:;"><img src="images/close.png" alt="关闭"></a></div>
+			<div class="menu_pop clearfix">
+				<div class="pop_title">用户名密码登录</div>
+				<form class="pop_table clearfix">
+					<input type="text" name="username" class="name_input" placeholder="&nbsp;请输入用户名">
+					<div class="user_error">&nbsp;输入错误</div>
+					<input type="password" name="pwd" class="pass_input" placeholder="&nbsp;请输入密码">
+					<div class="pwd_error">&nbsp;输入错误</div>
+					<input type="submit" name="" value="登录" class="input_submit">
+				</form>
+				<div class="pop_buttom">
+					<a href="#" class="pop_forget">忘记密码？</a>
+					<a href="#" class="pop_register">立即注册</a>
+				</div>
+			</div>
+		</div>
+		<div class="mask"></div>
+	</div>
+	<!-- 文件转换界面 -->
+	<div class="container content_con">
+		<div class="page-title">
+	        <h1>文件转换器</h1>
+	        <h2>将您的文件转换成测试文件</h2>
+	    </div>
+	    
+	    <div class="converter-container">
+	    	<!-- 无文件时 -->
+	    	<div class="converter-wrapper clearfix" style="display: block;">
+    			<div class="converter-menu clearfix">
+					<form class="file-source-button clearfix" action="javascript:;">
+						<input type='file' for="pc_upload_add" name="file" class="action-label">
+						<button type="sumit" id="file_add">点击上传</button>
+					</form>
+					<div class="file-source-caption">
+						<span>放置文件在这里. 最大文件大小100 MB  或者 <a href="#">注册</a></span>
+					</div>
+    			</div>
+	    	</div>
+			<!-- 有文件 -->
+			<div class="files_container" style="display:none;">
+				<ul class="data-table-wrapper">
+					<li class="row">
+						<div class="col-xs-4" id="name">LED.v</div>
+						<div class="col-xs-2" id="path">到	<em>>></em>	LED_INST.v</div>
+						<div class="col-xs-1">
+							<div id="ready">准备好了</div>
+						</div>
+						<div class="col-xs-4" id="size">2.31KB</div>
+						<div class="col-xs-1" id="quit"><a href="#">X</a></div>
+					</li>
+					<li class="row">
+						<div class="col-xs-4" id="name">LED.v</div>
+						<div class="col-xs-2" id="path">到	<em>>></em>	LED_INST.v</div>
+						<div class="col-xs-1">
+							<div id="ready">准备好了</div>
+						</div>
+						<div class="col-xs-4" id="size">2.31KB</div>
+						<div class="col-xs-1" id="quit"><a href="#">X</a></div>
+					</li>
+				</ul>
+				<div class="file-tools">
+					<div class="blank"></div>
+					<div class="file-add">
+						<div class="row add">
+							<div class="col-xs-8">
+								<a href="javascript:;" class="file" name="files"><em>+</em>&nbsp;&nbsp;添加更多文件
+								<input type="file" name="file" id="add_btn">
+								</a>
+								<!-- <input type="file" id=""><em>+</em>&nbsp;&nbsp;添加更多文件</input> -->
+							</div>
+							<div class="col-xs-4 feiji">
+								<div class="file-convert">转换</div>
+								<div class="file-bg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	    </div>
+	</div>
+	<div class="footer_index no-mp">
+		<div class="foot_link_index">
+			<a href="#">关于我们</a>
+			<span>|</span>
+			<a href="#">联系我们</a>
+			<span>|</span>
+			<a href="#">招聘人才</a>
+			<span>|</span>
+			<a href="#">友情链接</a>		
+		</div>
+		<p>CopyRight © 2020 西电智能化实验室 All Rights Reserved</p>
+		<p>电话：010-****888    陕ICP备*******8号</p>
+	</div>
+	
+</body>
+</html>
